@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.icon-button {
+    @apply cursor-pointer rounded-full p-2 
+    hover:bg-violet-800 hover:text-white 
+    transition-all ease-in-out duration-300
+    focus:bg-violet-800 focus:text-white 
+}
+
+.icon-button .icon {
+    @apply w-7 h-7
+}

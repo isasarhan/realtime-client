@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.messageInput{    
+    @apply  w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border
+    border-slate-200 rounded-md px-10 py-2 focus:outline-none focus:border-slate-400 hover:border-slate-300 
+    shadow-sm focus:shadow
+}
+
+.messageBtn{
+    @apply bg-[#8417ff] rounded-md flex items-center justify-center p-5 gap-2 focus:border-none 
+    focus:outline-none hover:bg-[#741bda] focus:bg-[#741bda] transition-all duration-300
+}
+.messageIcon{
+    @apply relative text-white
+}
