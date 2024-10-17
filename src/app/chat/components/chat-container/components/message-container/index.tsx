@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 import './style.css'
-import { Send } from '../../assets/icons'
 import { useSocket } from '@/context/SocketContext'
+import { Send } from '@/assets/icons'
 
 type Props = {}
  
