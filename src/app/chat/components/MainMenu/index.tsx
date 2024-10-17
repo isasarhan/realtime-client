@@ -2,6 +2,7 @@ import Navbar from '@/common/Navbar'
 import SearchInput from '@/common/SearchInput'
 import React from 'react'
 import ChatList from '../ChatList'
+import ChatContainer from '../chat-container'
 
 type Props = {}
 
@@ -19,6 +20,9 @@ const MainMenu = (props: Props) => {
                 <div className='flex-grow overflow-y-auto'>
                     <ChatList />
                 </div>
+            </div>
+            <div className='w-full'>
+                <ChatContainer />
             </div>
         </div>
     )

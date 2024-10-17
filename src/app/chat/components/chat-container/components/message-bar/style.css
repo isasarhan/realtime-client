@@ -1,0 +1,12 @@
+
+.messageInput{    
+    @apply  w-full flex-1 p-5 bg-transparent rounded-md focus:border-none focus:outline-none  bg-slate-300  placeholder:text-slate-600
+}
+
+.messageBtn{
+    @apply bg-[#8417ff] rounded-md flex items-center justify-center p-5 gap-2 focus:border-none 
+    focus:outline-none hover:bg-[#741bda] focus:bg-[#741bda] transition-all duration-300
+}
+.messageIcon{
+    @apply relative text-white
+}

@@ -1,39 +1,45 @@
-'use client'
-import React from 'react'
+import React from 'react';
 import './style.css'
-import { useSocket } from '@/context/SocketContext'
-import { Send } from '@/assets/icons'
-
 type Props = {}
- 
-const MessageContainer = ({ }: Props) => {
-    const { socket } = useSocket()
 
-    const handleClick = () => {
-        console.log('hi');
-        
-        socket?.emit("sendMessage", {
-            sender: '6703e42dca051ceecdfdb06c',
-            receiver: '6703e45dca051ceecdfdb070',
-            messageType: 'text',
-            content: 'hello',
-        })
-    }
+const MessageContainer = ({}: Props) => {
     return (
-        <div className="h-[10vh] flex justify-center items-center px-8  mb-5">
-            <div className='flex-1 flex rounded-md items-center gap-5 pr-5'>
-                <input
-                    type="text"
-                    placeholder="Search"
-                    className="flex-1 p-5 bg-transparent rounded-md focus:border-none focus:outline-none"
-                />
-            </div>
-            <div className='flex-1'>
-                <button className="messageBtn" onClick={()=>handleClick()}>
-                    <span className='messageIcon'><Send /></span>
-                </button>
-            </div>
+        <div className='flex-grow overflow-y-auto p-4'>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
+            <p>hi</p>
         </div>
     )
 }
-export default  MessageContainer
+
+export default MessageContainer;
