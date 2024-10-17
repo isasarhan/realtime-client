@@ -7,8 +7,10 @@ export default function RootLayout({
 }>) {
     return (
         <div className="w-full h-full max-h-screen">
-            <MainMenu/>
-            {children}
+            <div className='flex h-screen overflow-hidden'> {/* Prevent content overflow with overflow-hidden */}
+                <MainMenu />
+                {children}
+            </div>
         </div>
     )
 }

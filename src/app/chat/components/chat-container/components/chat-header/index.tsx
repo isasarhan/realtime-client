@@ -23,10 +23,10 @@ const ChatHeader: FC<ChatHeaderProps> = () => {
                     <h2 className='font-medium'>Issa Sarhan</h2>
                 </div>
                 <div className='flex space-x-5'>
-                    <IconButton icon={Search} iconClassName='!w-5 !h-5'/>
-                    <IconButton icon={Phone} iconClassName='!w-5 !h-5'/>
-                    <IconButton icon={Video} iconClassName='!w-5 !h-5'/>
-                    <IconButton icon={User} iconClassName='!w-5 !h-5'/>
+                    <IconButton icon={Search} />
+                    <IconButton icon={Phone} />
+                    <IconButton icon={Video} />
+                    <IconButton icon={User} />
                 </div>
             </div>
         </div>

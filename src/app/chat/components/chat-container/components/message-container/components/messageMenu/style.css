@@ -1,0 +1,29 @@
+/* styling for menu */
+.messageWrapper .message .menu {
+    @apply absolute text-slate-400 top-0  active:bg-slate-100 hover:bg-slate-100  p-2 rounded-full transition-all ease-in-out duration-500
+}
+
+.messageWrapper .sender .message .menu {
+    @apply -left-7
+}
+
+.messageWrapper .receiver .message .menu {
+    @apply -right-7
+}
+
+
+.messageWrapper .receiver .dropDown {
+    @apply opacity-0 invisible absolute bottom-0 -right-24 transition-all ease-in-out duration-200 text-white
+}
+
+.messageWrapper .sender .dropDown {
+    @apply opacity-0 invisible absolute bottom-0 -left-24 transition-all ease-in-out duration-200 text-white
+}
+
+.messageWrapper .receiver .dropDown.active {
+    @apply opacity-100 visible absolute bottom-0 -right-24 bg-violet-300 p-3 rounded; 
+}
+
+.messageWrapper .sender .dropDown.active {
+    @apply opacity-100 visible absolute bottom-0 -left-24 bg-violet-300 p-3 rounded; 
+}

@@ -1,7 +1,8 @@
 'use client';
-import { Send } from '@/assets/icons';
+import { Attachment, Emoji, Send } from '@/assets/icons';
 import type { FC } from 'react';
 import './style.css';
+import IconButton from '@/common/IconButton';
 
 interface MessageBarProps {}
 
@@ -16,19 +17,17 @@ const MessageBar: FC<MessageBarProps> = () => {
     };
 
     return (
-        <div className="h-32 flex items-center p-4 w-full border-t-2 border-slate-200"> 
-            {/* Flex container for input and button */}
-            <div className='flex flex-grow items-center gap-5 w-full'>
-                {/* Input should take all available space */}
+        <div className="messageInputWrapper h-32 flex items-center p-4 w-full border-t-2 border-slate-200"> 
+            <div className='flex flex-grow items-center gap-5 w-full '>
                 <input
                     type="text"
                     placeholder="Type your message..."
-                    className="flex-grow messageInput rounded-md px-4 py-2"
+                    className="flex-grow messageInput rounded-xl px-4 py-2"
                 />
-                {/* Button should stay fixed */}
-                <button className="messageBtn flex-shrink-0" onClick={handleClick}>
-                    <span className='messageIcon'><Send /></span>
-                </button>
+                <IconButton className='emoji' icon={Emoji} onClick={handleClick}/>
+                <IconButton className='emoji' icon={Attachment} onClick={handleClick}/>
+                <IconButton className='messageBtn' icon={Send} onClick={handleClick} iconClassName='!w-6 !h-6'/>
+                
             </div>
         </div>
     );

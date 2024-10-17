@@ -8,23 +8,20 @@ type Props = {}
 
 const MainMenu = (props: Props) => {
     return (
-        <div className='flex h-screen overflow-hidden'> {/* Prevent content overflow with overflow-hidden */}
+        <> {/* Prevent content overflow with overflow-hidden */}
             <Navbar />
             {/* Set height to full with flex-grow */}
-            <div className='w-1/4 shadow shadow-slate-300 bg-slate-100 p-6 flex flex-col h-full'>
-                <div className='mb-4'>
+            <div className='w-1/4 shadow shadow-slate-300 bg-slate-100  flex flex-col h-full'>
+                <div className='p-5'>
                     <h2 className='text-xl text-slate-700 font-bold'>Chats</h2>
                     <SearchInput />
                 </div>
-                {/* Ensure this container takes up the remaining space */}
-                <div className='flex-grow overflow-y-auto'>
+                <div className='flex-grow overflow-y-auto p-3'>
                     <ChatList />
                 </div>
             </div>
-            <div className='w-full'>
-                <ChatContainer />
-            </div>
-        </div>
+            
+        </>
     )
 }
 

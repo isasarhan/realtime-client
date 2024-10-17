@@ -5,7 +5,7 @@ type Props = {};
 
 const ContactContainer = (props: Props) => {
     return (
-        <button className='flex w-full p-2 mb-2 hover:bg-violet-500 rounded focus:bg-violet-500 focus:text-white hover:text-white'>
+        <button className='flex w-full p-4 mb-2 hover:bg-violet-400 rounded focus:bg-violet-400 focus:text-white hover:text-white'>
             <span className='me-3'>
                 <Image 
                     src={'/avatars/me.png'} 

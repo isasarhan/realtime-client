@@ -1,3 +1,7 @@
-.chatHeader{
-    
+.chatHeader .icon-button{
+    @apply text-slate-400 focus:!text-white hover:!text-white 
+}
+
+.chatHeader .icon{
+    @apply !w-5 !h-5
 }
