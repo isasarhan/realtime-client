@@ -3,26 +3,25 @@ import { ThreeDots } from '@/assets/icons';
 import { useEffect, useState, type ButtonHTMLAttributes, type FC, type ReactNode } from 'react';
 import './style.css'
 
-interface MessageMenuProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface MenuPopUpProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
 }
 
 
-const MessageMenu: FC<MessageMenuProps> = () => {
+const MenuPopUp: FC<MenuPopUpProps> = ({children}) => {
     const [open, setOpen] = useState(false)
     const handleClick = () => {
         setOpen(prev => !prev)
     }
     useEffect(() => { }, [open])
     return (
-        <div className='messageMenu'>
+        <div className='menuPopUp'>
             <button className='menu ' onClick={handleClick}><ThreeDots /></button>
             <div className={`dropDown  ${open ? 'active' : ''}`}>
-                <div>Edit</div>
-                <div>Delete</div>
+                {children}
             </div>
         </div>
     )
 }
 
-export default MessageMenu;
+export default MenuPopUp;
