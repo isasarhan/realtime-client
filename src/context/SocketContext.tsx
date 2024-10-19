@@ -1,7 +1,6 @@
 'use client'
-import { SERVER } from '@/lib/config' // Ensure this path is correct
-import React, { createContext, useContext, ReactNode, useRef, useEffect } from 'react'
-import { io, Socket } from 'socket.io-client' // Import Socket type
+import { io, Socket } from 'socket.io-client'
+import React, { createContext, useContext, useRef, useEffect, ReactNode } from 'react'
 
 type SocketContextType = {
     socket: Socket | null
@@ -16,25 +15,29 @@ type Props = {
 const SocketProvider = ({ children }: Props) => {
     const socket = useRef<Socket | null>(null)
 
-    // useEffect(() => {
-    //     socket.current = io(SERVER, {
-    //         withCredentials: true,
-    //         query: { userId: "6703e42dca051ceecdfdb06c" },
-    //     });
+    useEffect(() => {
+        socket.current = io("http://localhost:4200", {
+            withCredentials: true,
+            query: { userId: "671347b8d7476447def9281e" },
+        })
 
-    //     socket.current.on("connect", () => {
-    //         console.log("Connected to socket server");
-    //     });
-    //     const handleReceiveMessage = (message: any) => {
-    //         console.log(message);
-    //     };
+        socket.current.on("connect", () => {
+            console.log("Connected to socket server with ID:", socket.current?.id)
+        })
 
-    //     socket.current.on("receiveMessage", handleReceiveMessage);
+        socket.current.on("connect_error", (error) => {
+            console.error("Connection error:", error)
+        })
 
-    //     return () => {
-    //         socket.current?.disconnect()
-    //     }
-    // }, [])
+        socket.current.on("receiveMessage", (message) => {
+            console.log("New message received:", message)
+        })
+
+        return () => {
+            socket.current?.disconnect()
+            console.log("Disconnected from socket server")
+        }
+    }, [])
 
     return (
         <SocketContext.Provider value={{ socket: socket.current }}>
@@ -43,6 +46,8 @@ const SocketProvider = ({ children }: Props) => {
     )
 }
 
+export default SocketProvider
+
 export const useSocket = () => {
     const context = useContext(SocketContext)
     if (!context) {
@@ -50,5 +55,3 @@ export const useSocket = () => {
     }
     return context
 }
-
-export default SocketProvider
