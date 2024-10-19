@@ -1,7 +1,6 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import SocketProvider from "@/context/SocketContext"
-import Navbar from "@/common/Navbar"
+import Providers from "@/context/Providers"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,11 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SocketProvider>
-        <body className="flex"> 
-            {children}
-        </body>
-      </SocketProvider>
+      <body className="flex">
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

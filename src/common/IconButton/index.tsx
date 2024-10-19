@@ -4,14 +4,15 @@ import { IconType } from 'react-icons';
 
 type IconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     children?: ReactNode;
-    className?: string; 
-    iconClassName?: string; 
-    icon: IconType; 
+    className?: string;
+    iconClassName?: string;
+    icon: IconType;
+    type?: 'button' | 'submit' | 'reset';
 };
 
-const IconButton: FC<IconButtonProps> = ({ children, icon: Icon, className, iconClassName, ...rest }) => {
+const IconButton: FC<IconButtonProps> = ({ children, icon: Icon, className, type = 'button', iconClassName, ...rest }) => {
     return (
-        <button className={`icon-button text-common ${className}`} {...rest}>
+        <button type={type} className={`icon-button text-common ${className}`} {...rest}>
             {Icon && <Icon className={`icon ${iconClassName}`} />}
             {children}
         </button>

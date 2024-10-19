@@ -5,7 +5,9 @@ import { RiPhoneLine ,RiVideoOnLine, RiTimeLine} from "react-icons/ri";
 import { HiDotsVertical } from "react-icons/hi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { RiAttachmentLine } from "react-icons/ri";
+import { RiLock2Line } from "react-icons/ri";
 
+export const Lock = RiLock2Line
 export const Send = IoIosSend
 export const Video = RiVideoOnLine
 export const Search = RiSearch2Line 

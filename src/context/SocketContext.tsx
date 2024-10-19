@@ -48,7 +48,7 @@ const SocketProvider = ({ children }: Props) => {
 
 export default SocketProvider
 
-export const useSocket = () => {
+export const useSocket = (): SocketContextType => {
     const context = useContext(SocketContext)
     if (!context) {
         throw new Error('useSocket must be used within a SocketProvider')
