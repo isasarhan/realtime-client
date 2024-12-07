@@ -1,9 +1,9 @@
+import ChatModule from '@/modules/chat'
 import React from 'react'
-import ChatContainer from './components/chat-container'
 
 const ChatPage = () => {
   return (
-    <ChatContainer />
+    <ChatModule />
   )
 }
 

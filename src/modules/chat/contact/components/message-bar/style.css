@@ -1,0 +1,18 @@
+
+.messageInput{    
+    @apply  w-full flex-1 p-3 bg-transparent rounded-md focus:border-none focus:outline-none 
+     bg-slate-200  placeholder:text-slate-600
+}
+
+.messageBtn{
+    @apply bg-[#8417ff] rounded-full flex items-center justify-center p-2 gap-2 focus:border-none 
+    focus:outline-none hover:bg-[#741bda] focus:bg-[#741bda] transition-all duration-300 text-white
+}
+
+.messageInputWrapper .emoji{
+    @apply text-slate-400 focus:!text-white hover:!text-white 
+}
+
+.messageInputWrapper .emoji .icon {
+    @apply w-5 h-5
+}

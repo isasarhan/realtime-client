@@ -6,8 +6,11 @@ import { HiDotsVertical } from "react-icons/hi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { RiAttachmentLine } from "react-icons/ri";
 import { RiLock2Line } from "react-icons/ri";
+import { RiLogoutBoxLine } from "react-icons/ri";
+import { RiArrowDownSLine , RiCloseFill,RiAddFill,  } from "react-icons/ri";
 
 export const Lock = RiLock2Line
+export const Close = RiCloseFill 
 export const Send = IoIosSend
 export const Video = RiVideoOnLine
 export const Search = RiSearch2Line 
@@ -25,3 +28,6 @@ export const Clock = RiTimeLine
 export const Emoji = BsEmojiGrin
 export const Attachment = RiAttachmentLine
 export const ThreeDots = HiDotsVertical 
+export const LogOut = RiLogoutBoxLine 
+export const Add = RiAddFill
+export const ArrowDown = RiArrowDownSLine 

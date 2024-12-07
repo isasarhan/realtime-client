@@ -1,0 +1,8 @@
+
+.chatList ::-webkit-scrollbar {
+    @apply w-0;
+  }
+
+  .contactBtn {
+    @apply flex w-full p-4 mb-2 hover:bg-violet-400 rounded focus:bg-violet-400 focus:text-white hover:text-white
+  }

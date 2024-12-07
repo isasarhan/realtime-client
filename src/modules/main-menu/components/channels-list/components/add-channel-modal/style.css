@@ -1,0 +1,3 @@
+.contactCheckBox{
+    @apply appearance-none rounded border border-slate-300 bg-violet-100 h-5 w-5 checked:bg-violet-400 
+}

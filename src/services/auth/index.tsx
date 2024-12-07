@@ -1,15 +1,17 @@
-import useAxios from '../axios';
+import httpService from '../axios';
 
 interface User {
     email: string,
     password: string
 }
 const useAuth = () => {
-    const instance = useAxios()
-    var url = `/auth`;
+    const instance = httpService.instance
+    let url = `/auth`;
     const login = async (user: User) => {
-        let res = await instance.post(`${url}/login`, user)
-        return res.data
+        return await instance.post(`${url}/login`, user).then((res)=>{
+            return res.data
+        })
+        
     };
     return { login };
 }

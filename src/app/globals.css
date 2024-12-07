@@ -28,5 +28,8 @@ body {
 
 @layer components {
   .text-common {
-    @apply text-violet-600  }
+    @apply text-violet-600  dark:text-slate-50}
+}
+::-webkit-scrollbar {
+  display:none;
 }
