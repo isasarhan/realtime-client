@@ -5,7 +5,3 @@
 .profile .userImage{
     @apply border-2 rounded-full border-violet-300 overflow-hidden
 }
-.profile .menuIcon{
-    @apply hover:bg-slate-300 hover:rounded-full w-7 h-7 p-1 transition-all duration-300 
-    text-slate-500    
-}

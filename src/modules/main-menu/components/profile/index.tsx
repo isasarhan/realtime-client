@@ -2,10 +2,13 @@ import Image from 'next/image'
 import React, { FC } from 'react'
 import './style.css'
 import Accordion from '@/common/Accordion'
-import { ThreeDots } from '@/assets/icons'
+import Dropdown, { Direction } from '@/common/Dropdown'
+import { useTranslation } from 'react-i18next'
 export interface ProfileProps { }
 
+
 const Profile: FC<ProfileProps> = () => {
+
     const accordionData = [
         {
             title: "Personal Info",
@@ -25,12 +28,17 @@ const Profile: FC<ProfileProps> = () => {
             content: "The main difference is that the core components from Flowbite are open source under the MIT license...",
         }
     ]
+    const { t, ready } = useTranslation()
+
     return (
         <>
             <div className='profile p-5'>
                 <div className="flex items-center justify-between">
-                    <h2 className='text-xl text-slate-700 font-bold dark:!text-white'>Profile</h2>
-                    <span className=' flex items-center justify-center'><ThreeDots className='menuIcon'/></span>
+                    <h2 className='text-xl text-slate-700 font-bold dark:!text-white'>{t('profile.title')}</h2>
+                    <Dropdown direction={Direction.Left}>
+                        <div>Edit</div>
+                        <div>Delete</div>
+                    </Dropdown>
                 </div>
                 <div className='flex justify-center items-center flex-col mt-6'>
                     <div className="userImage">

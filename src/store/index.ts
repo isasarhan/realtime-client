@@ -9,7 +9,7 @@ export enum MenuItems {
     Channels = 'channels',
     Profile = 'profile',
     Settings = 'settings',
-    Notifications = 'notifications'
+    Contacts = 'contacts'
 }
 
 // Combine the slice interfaces into a single type

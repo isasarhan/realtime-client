@@ -1,0 +1,32 @@
+{
+  "welcome": "Welcome to our site!",
+  "language": "Language",
+  "profile": {
+    "title": "Profile"
+  },
+  "chats": {
+    "title": "Chats",
+    "recentTitle": "Recent"
+  },
+  "channels": {
+    "title": "Channels"
+  },
+  "contacts": {
+    "title": "Contacts"
+  },
+  "settings": {
+    "title": "Settings",
+    "personalInfo": {
+      "title": "Personal Info"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "security": {
+      "title": "Security"
+    },
+    "help": {
+      "title": "Help"
+    }
+  }
+}

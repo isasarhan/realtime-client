@@ -1,0 +1,32 @@
+{
+  "welcome": "مرحبًا بك في موقعنا!",
+  "language": "اللغة",
+  "profile": {
+    "title": "الملف الشخصي"
+  },
+  "chats": {
+    "title": "الدردشات",
+    "recentTitle": "المحادثات الأخيرة"
+  },
+  "channels": {
+    "title": "القنوات"
+  },
+  "contacts": {
+    "title": "قائمة الاتصال"
+  },
+  "settings": {
+    "title": "إعدادات",
+    "personalInfo": {
+      "title": "المعلومات الشخصية"
+    },
+    "privacy": {
+      "title": "الخصوصية"
+    },
+    "security": {
+      "title": "الأمان"
+    },
+    "help": {
+      "title": "المساعدة"
+    }
+  }
+}

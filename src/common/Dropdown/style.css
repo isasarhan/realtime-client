@@ -1,0 +1,25 @@
+
+.dropDown {
+    @apply opacity-0 invisible absolute bottom-0 transition-all ease-in-out duration-200 text-slate-500 w-36 
+    flex flex-col gap-3 
+}
+
+.dropDown.active{
+    @apply opacity-100 visible absolute bottom-0 bg-white rounded p-4
+}
+
+.left.dropDown {
+    @apply right-0 top-0
+}
+
+.left.dropDown.active {
+    @apply  right-1 top-7 h-fit
+}
+
+.right.dropDown {
+    @apply left-1 top-5 h-fit
+}
+
+.right.dropDown.active {
+    @apply  left-8 top-5 ;
+}
