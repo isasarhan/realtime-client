@@ -16,13 +16,13 @@ const Providers: React.FC<ProvidersProps> = ({ children }) => {
         <UserProvider>
             <DarkModeProvider>
                 <SocketProvider>
-                    <I18nProvider>
+                    {/* <I18nProvider> */}
                     <SnackbarProvider maxSnack={3}>
                         <TailwindSnackbarProvider>
                             {children}
                         </TailwindSnackbarProvider>
                     </SnackbarProvider>
-                    </I18nProvider>
+                    {/* </I18nProvider> */}
                 </SocketProvider>
             </DarkModeProvider>
         </UserProvider>

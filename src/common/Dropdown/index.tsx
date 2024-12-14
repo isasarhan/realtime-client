@@ -24,10 +24,10 @@ const Dropdown: FC<DropdownProps> = ({ children, iconStyle, className, direction
     const handleClick = () => {
         setOpen(prev => !prev)
     }
-    return (
-        <div className={`${className} menuPopUp relative`}>
+    return (    
+        <div className={`${className} menuPopUp relative `}>
             <button className='menu ' onClick={handleClick}>{Icon? <Icon className={iconStyle}/>: <ThreeDots className={iconStyle}/>}</button>
-            <div className={`${direction} dropDown  ${open ? 'active' : ''}`}>
+            <div className={`${direction} dropDown z-50 ${open ? 'active' : ''}`}>
                 {children}
             </div>
         </div>

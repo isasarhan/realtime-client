@@ -13,7 +13,7 @@ const ChatList = (props: Props) => {
     const [contacts, setContacts] = useState<IUser[]>([])
     const [filteredContacts, setFilteredContacts] = useState<IUser[]>([])
     const { getAllContacts } = useContacts()
-    const { token, user } = useUserContext()
+    const { user } = useUserContext()
     const { t } = useTranslation()
 
     const handleSearch = (query: string) => {
@@ -27,17 +27,16 @@ const ChatList = (props: Props) => {
         setFilteredContacts(filtered)
     }
     useEffect(()=>{},[filteredContacts])
-    console.log(token);
     
     useEffect(() => {
         const getAll = async () => {
-            const result = await getAllContacts(token)
+            const result = await getAllContacts()
             const filtered: IUser[] = result.filter((contact: IUser) => contact._id !== user?._id);
             setContacts(filtered)
             setFilteredContacts(filtered)
         }
         getAll()
-    }, [token])
+    }, [])
     return (
         <>
             <div className='p-5'>

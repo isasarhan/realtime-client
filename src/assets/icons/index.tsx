@@ -7,8 +7,11 @@ import { BsEmojiGrin } from "react-icons/bs";
 import { RiAttachmentLine } from "react-icons/ri";
 import { RiLock2Line } from "react-icons/ri";
 import { RiLogoutBoxLine } from "react-icons/ri";
-import { RiArrowDownSLine , RiCloseFill,RiAddFill,  } from "react-icons/ri";
+import { RiArrowDownSLine , RiCloseFill,RiAddFill, RiShare2Line, RiForbid2Line, RiDeleteBin2Line} from "react-icons/ri";
 
+export const Share = RiShare2Line
+export const Block = RiForbid2Line
+export const Delete = RiDeleteBin2Line
 export const Lock = RiLock2Line
 export const Close = RiCloseFill 
 export const Send = IoIosSend
